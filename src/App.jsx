@@ -6,10 +6,12 @@ import './App.css'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Library from '../pages/Library'
+import LibraryProvider from '../pages/LibraryProvider'
 
 function App() {
 
   return (
+    <LibraryProvider>
     <Router>
     <div className='flex flex-col min-h-screen'>
     <Navbar/>
@@ -20,6 +22,7 @@ function App() {
     <Footer/>
     </div>
     </Router>
+    </LibraryProvider>
   )
 }
 
