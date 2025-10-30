@@ -9,7 +9,7 @@ export default function Library(){
     return(
         <>
         <div className='grow'>
-            <h1>Favorites</h1>
+            <h1 className='text-3xl font-medium text-green-900 flex text-center cursor-pointer'>Favorites</h1>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4'>
             {library.map((book) =>(
                 <div key={book.key} className='flex flex-col justify-between rounded mb-2.5 gap-2 border-gray-200 bg-zinc-200 shadow-lg hover:shadow-xl transition-shadow duration-300 p-4'>
