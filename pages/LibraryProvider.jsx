@@ -9,8 +9,11 @@ export default function LibraryProvider({children}){
             setLibrary([...library, book])
         }
     }
+    const removeFromLibrary = (book) => {
+        setLibrary(library.filter(b => b.key !== book.key))
+    }
     return(
-        <LibraryContext.Provider value = {{library, addToLibrary}}>
+        <LibraryContext.Provider value = {{library, addToLibrary, removeFromLibrary}}>
             {children}
         </LibraryContext.Provider>
     )

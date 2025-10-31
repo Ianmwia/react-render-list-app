@@ -71,7 +71,7 @@ export default function RenderBooks(){
                     <img className='rounded mb-2' src={`https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`} alt={book.title} />
                     <p className='text-lg font-medium text-black' >{book.title}</p>
                     <p className='text-sm text-gray-600'>Author: {book.author_name}</p>
-                    <button onClick={()=> handleAdd(book)} className='text-sm bg-gray-500 text-zinc-200 rounded p-2.5adding'>Add To Favorites</button>
+                    <button onClick={()=> handleAdd(book)} className='text-sm bg-gray-500 text-zinc-200 rounded p-2.5'>Add To Favorites</button>
                 </div>
             ))}
         </div>
