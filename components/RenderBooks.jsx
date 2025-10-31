@@ -34,8 +34,13 @@ export default function RenderBooks(){
             }
             
         }
-        fetchBooks()
+        //debounce on keystroke to reduce api calls
+        const delayBounce = setTimeout(()=>{
+            fetchBooks()
+        }, 2000)
+        return ()=> clearTimeout(delayBounce)
     },[search])
+    
 
     const handleSearch = (e) => {
         setSearch(e.target.value)
